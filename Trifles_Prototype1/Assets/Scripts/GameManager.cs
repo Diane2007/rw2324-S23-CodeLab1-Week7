@@ -5,6 +5,9 @@ using System.IO;
 using UnityEngine;
 using TMPro;
 
+
+//SORRY I HAVE TO GO WITH THE BLASPHEMY OF COROUTINE ;-;
+//I just don't know how else to show my dialogue character by character like a printing machine...
 public class GameManager : MonoBehaviour
 {
     //set up a singleton
@@ -38,7 +41,8 @@ public class GameManager : MonoBehaviour
         //clear the text file
         dialogue.text = string.Empty;
         
-
+        //start loading dialogue
+        DialogueSystem();
     }
 
     //DIALOGUE SYSTEM
@@ -62,7 +66,31 @@ public class GameManager : MonoBehaviour
         
         //load all lines from the current txt
         string[] fileLines = File.ReadAllLines(newPath);
+
+        //go through each line with a for loop
+        for (int lineNum = 0; lineNum < fileLines.Length; lineNum++)
+        {
+            string lineContents = fileLines[lineNum];
+
+                //now get each character from each line
+                char[] lineChar = lineContents.ToCharArray();
+
+                //loop through each character
+                for (int charNum = 0; charNum < lineChar.Length + 1; charNum++)
+                {
+                    //print out the char one by one
+                    if (charNum < lineChar.Length)
+                    {
+                        dialogue.text += lineChar[charNum];
+                        
+                    }
+                    //an empty line in between each line in the txt files
+                    if (charNum == lineChar.Length)
+                    {
+                        dialogue.text += "\n" + "\n";
+                    }
+                }
+        }
     }
     
-
 }

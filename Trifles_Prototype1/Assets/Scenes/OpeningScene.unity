@@ -684,6 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1556250199}
+  typewriterSound: {fileID: 1343805351}
 --- !u!1 &2146698883
 GameObject:
   m_ObjectHideFlags: 0

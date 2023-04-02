@@ -59,15 +59,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public AudioSource typewriterSound;
+    
     IEnumerator DialogueSystem()
     {
-        
         //customize every dialogue file
         string newPath = FILE_PATH.Replace("Num", currentTextFile + "");
         
         //load all lines from the current txt
         string[] fileLines = File.ReadAllLines(newPath);
 
+        //start playing typewriter sound
+        typewriterSound.Play();
+        
         //go through each line with a for loop
         for (int lineNum = 0; lineNum < fileLines.Length; lineNum++)
         {
@@ -99,6 +103,10 @@ public class GameManager : MonoBehaviour
                 
                 yield return null;
         }
+        
+        //when the text is finished printing
+        //stop playing typewriter sound
+        typewriterSound.Stop();
     }
     
 }

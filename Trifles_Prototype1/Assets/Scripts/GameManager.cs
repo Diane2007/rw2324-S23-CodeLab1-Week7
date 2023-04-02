@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         dialogue.text = string.Empty;
         
         //start loading dialogue
-        DialogueSystem();
+        StartCoroutine(DialogueSystem());
     }
 
     //DIALOGUE SYSTEM
@@ -55,12 +55,13 @@ public class GameManager : MonoBehaviour
         set
         {
             currentTextFile = value;
-            DialogueSystem();
+            StartCoroutine(DialogueSystem());
         }
     }
 
-    void DialogueSystem()
+    IEnumerator DialogueSystem()
     {
+        
         //customize every dialogue file
         string newPath = FILE_PATH.Replace("Num", currentTextFile + "");
         
@@ -89,7 +90,14 @@ public class GameManager : MonoBehaviour
                     {
                         dialogue.text += "\n" + "\n";
                     }
+                    
+                    //sorry I have to use CoRoutine and not really understand what it is ;-;
+                    //but I tried Time.deltaTime and it's just not working when printing the characters
+                    //I watched this YouTube video: https://www.youtube.com/watch?v=45zJpi0jt_Q
+                    yield return new WaitForSeconds(0.05f);
                 }
+                
+                yield return null;
         }
     }
     

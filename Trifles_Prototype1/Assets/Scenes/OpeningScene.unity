@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 1691587224}
   - component: {fileID: 1691587225}
   m_Layer: 0
-  m_Name: GameManagerHolder
+  m_Name: DialogueSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -994,7 +994,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1691587223}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2ec6286850f4cf1baa4abc43329e26, type: 3}
+  m_Script: {fileID: 11500000, guid: 9cb7f343be7e74609b4cf5c6a6d5c773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 1556250199}

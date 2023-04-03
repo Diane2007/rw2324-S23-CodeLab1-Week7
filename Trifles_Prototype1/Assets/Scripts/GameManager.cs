@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 
@@ -25,14 +26,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
-    {
-
-    }
-
     //init the texts and current locations
-    public TextMeshProUGUI locationName;
-    public TextMeshProUGUI locationDescription;
+    public TextMeshProUGUI title;
+    public TextMeshProUGUI description;
     public LocationScriptableObject currentLocation;
     
     //init buttons
@@ -43,8 +39,47 @@ public class GameManager : MonoBehaviour
     
     void UpdateLocation()
     {
-        
+        //change the title and description text into that of the currentLocation's
+        title.text = currentLocation.locationName;
+        description.text = currentLocation.locationDescription;
     }
 
+    //init player
+    public GameObject player;
+    Vector3 playerStartPos;
+    int moveDistance = 65;
+    
+    void Start()
+    {
+        //start with the initial current location
+        UpdateLocation();
+        
+        //define player start position
+        playerStartPos = GetComponent<Transform>().position;
+        Debug.Log(playerStartPos);
+    }
+
+    //press button to move in locations
+    public void MoveDirection(int dir)
+    {
+        switch (dir)
+        {
+            case 0:     //up
+                currentLocation = currentLocation.upLocation;
+                break;
+            case 1:     //down
+                currentLocation = currentLocation.downLocation;
+                break;
+            case 2:     //left
+                currentLocation = currentLocation.leftLocation;
+                break;
+            case 3:     //right
+                currentLocation = currentLocation.rightLocation;
+                break;
+        }
+        
+        //if missing this, text won't update
+        UpdateLocation();
+    }
     
 }

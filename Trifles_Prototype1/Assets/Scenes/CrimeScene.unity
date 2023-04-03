@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 237505932}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2042237995}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveDirection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &237505932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,7 +785,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677755668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -103.76284, z: 0}
+  m_LocalPosition: {x: 0, y: -103, z: 0}
   m_LocalScale: {x: 3.3471887, y: 3.3471887, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -998,7 +1010,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 776097308}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2042237995}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveDirection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &776097308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,7 +1144,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 836072528}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2042237995}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveDirection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &836072528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,7 +1362,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1260070747}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2042237995}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoveDirection
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1260070747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1773,13 +1821,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2ec6286850f4cf1baa4abc43329e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationName: {fileID: 718937127}
-  locationDescription: {fileID: 1281336087}
+  title: {fileID: 718937127}
+  description: {fileID: 1281336087}
   currentLocation: {fileID: 11400000, guid: fd59c98c36d5a486b9694b111970b1c5, type: 2}
   up: {fileID: 836072527}
   down: {fileID: 1260070746}
   left: {fileID: 237505931}
   right: {fileID: 776097307}
+  player: {fileID: 0}
 --- !u!1 &2136963690
 GameObject:
   m_ObjectHideFlags: 0

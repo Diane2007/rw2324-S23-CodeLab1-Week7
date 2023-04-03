@@ -48,8 +48,24 @@ public class GameManager : MonoBehaviour
         //clear the text
         dialogue.text = string.Empty;
         
-        //start loading dialogue
+        //BLASPHEMY... start loading dialogue
         StartCoroutine(DialogueSystem());
+    }
+
+    //init the texts and current locations
+    public TextMeshProUGUI locationName;
+    public TextMeshProUGUI locationDescription;
+    public LocationScriptableObject currentLocation;
+    
+    //init buttons
+    public Button up;
+    public Button down;
+    public Button left;
+    public Button right;
+    
+    void UpdateLocation()
+    {
+        
     }
 
     //DIALOGUE SYSTEM

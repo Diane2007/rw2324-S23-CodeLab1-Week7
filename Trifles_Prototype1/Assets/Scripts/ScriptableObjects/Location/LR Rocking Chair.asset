@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd24e9bea1c2041eb94b278ce1c2e9b3, type: 3}
+  m_Name: LR Rocking Chair
+  m_EditorClassIdentifier: 
+  locationName: Rocking Chair
+  locationDescription: It seems to be the only comfortable chair in the house...
+  upLocation: {fileID: 11400000, guid: 951c3f6b65a29458d87a1ee38500a033, type: 2}
+  downLocation: {fileID: 0}
+  leftLocation: {fileID: 0}
+  rightLocation: {fileID: 11400000, guid: fd59c98c36d5a486b9694b111970b1c5, type: 2}

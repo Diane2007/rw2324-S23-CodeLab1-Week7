@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 
 //SORRY I HAVE TO GO WITH THE BLASPHEMY OF COROUTINE ;-;
@@ -32,13 +33,19 @@ public class GameManager : MonoBehaviour
     
     //init the dialogue game objects
     public TextMeshProUGUI dialogue;
+    
+    //init the >>>Next button
+    public Button nextButton;
 
     void Start()
     {
+        //the next button won't show until txt is done printing
+        nextButton.gameObject.SetActive(false);
+            
         //set up the file path for all dialogue txt
         FILE_PATH = Application.dataPath + FILE_DIR + FILE_NAME;
         
-        //clear the text file
+        //clear the text
         dialogue.text = string.Empty;
         
         //start loading dialogue
@@ -49,6 +56,7 @@ public class GameManager : MonoBehaviour
     //numbering the txt files in TextResources with a property
     int currentTextFile = 0;
 
+    //TODO: When there are multiple files in TextResources, remember to CurrentTextFile++
     public int CurrentTextFile
     {
         get { return currentTextFile; }
@@ -107,6 +115,9 @@ public class GameManager : MonoBehaviour
         //when the text is finished printing
         //stop playing typewriter sound
         typewriterSound.Stop();
+        
+        //show the >>>Next button
+        nextButton.gameObject.SetActive(true);
     }
     
 }

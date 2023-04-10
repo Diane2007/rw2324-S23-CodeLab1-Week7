@@ -13,7 +13,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     //set up a singleton
-    static GameManager instance;
+    public static GameManager instance;
     void Awake()
     {
         if (!instance)
